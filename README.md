@@ -11,19 +11,22 @@ The projects included here focus on data preprocessing, exploratory analysis, mo
 Projects are organized into folders for clarity and scalability.  
 Each major project or internship is maintained as a separate directory.
 
-```
 
-Machine-Learning-Projects/
-│
-├── Cognifyz_Machine_Learning_Internship_Mrinmoy_Debnath/
-│   ├── Task-1/
-│   ├── Task-2/
-│   ├── Task-3/
-│   └── README.md
-│
-└── README.md
+    Machine-Learning-Projects/
+    │
+    ├── Cognifyz_Machine_Learning_Internship/
+    │ ├── Task-1/
+    │ ├── Task-2/
+    │ ├── Task-3/
+    │ └── README.md
+    │
+    ├── INTERNPE_Machine_Learning_Internship/
+    │ ├── Diabetes_Prediction/
+    │ ├── Car_Price_Prediction/
+    │ └── README.md
+    │
+    └── README.md
 
-```
 
 ---
 
@@ -40,6 +43,24 @@ Each task folder includes:
 - Jupyter Notebook (implementation)
 - Dataset (for independent execution)
 - Task-specific `README.md` with explanation
+
+---
+
+### 🔹 INTERNPE Machine Learning Internship
+This folder contains machine learning projects completed during my **Machine Learning Internship at INTERNPE**, focusing on practical model development and prediction systems.
+
+Projects included:
+
+- **Diabetes Prediction**  
+  A classification model that predicts whether a person is diabetic using medical attributes.
+
+- **Car Price Prediction**  
+  A regression model that predicts the selling price of a car based on features such as company, year, fuel type, and kilometers driven.
+
+Each project folder includes:
+- Jupyter Notebook implementation
+- Dataset used for training/testing
+- Detailed `README.md` explaining the project workflow
 
 ---
 
@@ -65,5 +86,3 @@ Each task folder includes:
 ## 👤 Author
 
 **Mrinmoy Debnath** | **ML Learner**
-
-
