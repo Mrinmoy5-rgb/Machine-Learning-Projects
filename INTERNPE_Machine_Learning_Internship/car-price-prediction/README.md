@@ -151,6 +151,9 @@ Run the Streamlit app:
 
 streamlit run app.py
 
+Use the App:
+
+https://mrinmoy-7-car-price-prediction.streamlit.app
 
 ---
 
