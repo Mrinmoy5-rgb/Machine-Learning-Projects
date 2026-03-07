@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import os
+import joblib
 
 st.set_page_config(
     page_title="Car Price Predictor",
@@ -24,7 +25,7 @@ df = load_data()
 @st.cache_resource
 def load_model():
     model_path = os.path.join(BASE_DIR, "car_price_model.pkl")
-    return pickle.load(open(model_path, "rb"))
+    return joblib.load(model_path)
 
 pipe = load_model()
 
