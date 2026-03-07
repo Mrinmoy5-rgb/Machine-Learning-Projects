@@ -137,7 +137,7 @@ streamlit run app.py
 Clone the repository:
 
 
-git clone https://github.com/your-username/car-price-prediction.git
+git clone https://github.com/Mrinmoy5-rgb/Machine-Learning-Projects/tree/main/INTERNPE_Machine_Learning_Internship/car-price-prediction
 
 
 Install dependencies:
