@@ -1,112 +1,172 @@
-# 🚗 Car Price Prediction using Machine Learning
+# 🚗 Car Price Prediction System
 
-## 📌 Project Overview
+This project builds a **Machine Learning regression model** to predict the **selling price of a used car** based on its specifications.
 
-This project builds a **Machine Learning regression model** that predicts the **selling price of a car** based on its features.
-
-The model analyzes attributes such as **company, manufacturing year, fuel type, and kilometers driven** to estimate the car's market value.
-
-This project demonstrates key machine learning concepts such as **data preprocessing, feature encoding, model training, and prediction**.
+The project also includes a **Streamlit web application** that allows users to interactively predict car prices through a simple interface.
 
 ---
 
-## 📊 Dataset Information
+# 📌 Project Overview
 
-The dataset contains information about used cars and their selling prices.
+The model analyzes several features of a car such as:
 
-### 🔢 Features
+- Company
+- Model
+- Manufacturing Year
+- Kilometers Driven
+- Fuel Type
+
+Using these inputs, the model predicts the **estimated market price of the car**.
+
+---
+
+# 📊 Dataset
+
+The dataset used in this project contains information about used cars listed for sale.
+
+Dataset file:
+
+    quikr_car.csv
+
+
+### Features
 
 | Feature | Description |
-|-------|-------------|
+|------|------|
 | Company | Brand of the car |
+| Model | Specific car model |
 | Year | Manufacturing year |
 | Kms Driven | Total kilometers driven |
 | Fuel Type | Petrol / Diesel / CNG |
 
-### 🎯 Target Variable
+### Target Variable
 
 | Feature | Description |
-|--------|-------------|
+|------|------|
 | Price | Selling price of the car |
 
 ---
 
-## 🤖 Machine Learning Models Used
+# 🧠 Machine Learning Models
 
-Two regression models were trained and compared:
+Two regression models were trained:
 
 - **Linear Regression**
 - **Random Forest Regressor**
 
-The models were evaluated using the **R² Score** to determine prediction performance.
+### Model Performance
 
----
-
-## ⚙️ Project Workflow
-
-
-    Data Loading
-    ↓
-    Data Cleaning
-    ↓
-    Handling Missing Values
-    ↓
-    Feature Encoding
-    ↓
-    Train-Test Split
-    ↓
-    Model Training
-    ↓
-    Model Evaluation
-    ↓
-    Price Prediction
-
-
----
-
-## 🛠️ Libraries Used
-
-| Library | Purpose |
+| Model | R² Score |
 |------|------|
-| 🐍 Python | Programming Language |
-| 📊 Pandas | Data Manipulation |
-| 🔢 NumPy | Numerical Computation |
-| 🤖 Scikit-Learn | Machine Learning Models |
-| 📓 Jupyter Notebook | Development Environment |
+| Linear Regression | **0.82** |
+| Random Forest | 0.67 |
+
+Linear Regression performed better and was selected as the **final model**.
+
+The trained model was saved as:
+
+
+    car_price_model.pkl
+
 
 ---
+## 📷 Application Preview
+![Car Price Prediction](car-price-prediction.png)
 
-## 🔍 Model Output
+# 🔮 Example Prediction
 
-The trained model predicts the **estimated selling price of a car** based on input features such as company, year, fuel type, and kilometers driven.
-
-Example prediction:
+Example input:
 
 
-    Input:
-    Company: Tata
-    Year: 2018
-    Kms Driven: 27000
+    Company: Honda
+    Model: City
+    Year: 2014
+    Kms Driven: 45000
     Fuel Type: Diesel
 
-    Predicted Price ≈ ₹3,49,000
+
+Predicted Price:
+
+
+    ₹3,49,015 (approximately)
+
 
 ---
 
-## 📁 Files Included
+# 🌐 Streamlit Web Application
 
-    Car_Price_Prediction
+The project includes a **Streamlit application** where users can enter car details and instantly get a predicted price.
+
+To run the app locally:
+
+
+streamlit run app.py
+
+
+---
+
+# 📂 Project Structure
+
+
+    Car Price Prediction
     │
-    ├── Car_Price_Predictor.ipynb
-    ├── quikr_car.csv
-    └── README.md
+    ├── app.py 
+    ├── car-price-predictor.ipynb 
+    ├── car_price_model.pkl 
+    ├── quikr_car.csv 
+    ├── requirements.txt 
+    ├── README.md 
+    └── .gitignore 
 
 
 ---
 
-## 👨‍💻 Author
+# 🛠️ Libraries Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- Streamlit
+- Jupyter Notebook
+
+---
+
+# ⚙️ Installation
+
+Clone the repository:
+
+
+git clone https://github.com/your-username/car-price-prediction.git
+
+
+Install dependencies:
+
+
+pip install -r requirements.txt
+
+
+Run the Streamlit app:
+
+
+streamlit run app.py
+
+
+---
+
+# 🚀 Future Improvements
+
+- Add car image preview
+- Improve UI design
+- Add data visualization
+- Deploy the app online
+
+---
+
+# 👨‍💻 Author
 
 **Mrinmoy Debnath**  
-Machine Learning Enthusiast  
+Machine Learning Enthusiast
 
-🔗 GitHub: https://github.com/Mrinmoy5-rgb
+GitHub:  
+https://github.com/Mrinmoy5-rgb
