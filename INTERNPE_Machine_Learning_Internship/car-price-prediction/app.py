@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import os
 
 st.set_page_config(
     page_title="Car Price Predictor",
@@ -8,9 +9,12 @@ st.set_page_config(
     layout="wide"
 )
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 @st.cache_data
 def load_data():
-    df = pd.read_csv("quikr_car.csv")
+    csv_path = os.path.join(BASE_DIR, "quikr_car.csv")
+    df = pd.read_csv(csv_path)
     df['model'] = df['name'].str.split().str[1]
     df = df.dropna(subset=['model'])
     return df
@@ -19,7 +23,8 @@ df = load_data()
 
 @st.cache_resource
 def load_model():
-    return pickle.load(open("car_price_model.pkl","rb"))
+    model_path = os.path.join(BASE_DIR, "car_price_model.pkl")
+    return pickle.load(open(model_path, "rb"))
 
 pipe = load_model()
 
