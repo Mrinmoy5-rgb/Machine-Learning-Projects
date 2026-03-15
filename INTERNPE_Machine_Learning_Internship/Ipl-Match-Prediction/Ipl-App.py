@@ -5,7 +5,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
-
+import os
 
 st.set_page_config(page_title="IPL Winner Predictor", layout="centered")
 
@@ -117,7 +117,11 @@ def normalize_venue(venue):
 
 @st.cache_data
 def load_match_data():
-    df = pd.read_csv("ipl.csv")
+
+    BASE_DIR = os.path.dirname(__file__)
+    DATA_PATH = os.path.join(BASE_DIR, "ipl.csv")
+
+    df = pd.read_csv(DATA_PATH)
 
     for col in ["team1", "team2", "winner", "toss_winner"]:
         df[col] = df[col].replace(TEAM_MAP)
